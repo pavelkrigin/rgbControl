@@ -34,24 +34,38 @@ final class ViewController: UIViewController {
                                           green: CGFloat(sliderGreen.value),
                                           blue: CGFloat(sliderBlue.value), alpha: 1)
         
-        rgbShow.backgroundColor =  rgbShow.backgroundColor?.withAlphaComponent(CGFloat(sliderRed.value))
+//        rgbShow.backgroundColor =  rgbShow.backgroundColor?.withAlphaComponent(CGFloat(sliderRed.value))
     }
     
     @IBAction func sliderGreenAction() {
         greenColorMeaning.text = String(sliderGreen.value)
         rgbShow.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1)
         
-        rgbShow.backgroundColor =  rgbShow.backgroundColor?.withAlphaComponent(CGFloat(sliderGreen.value))
+//        rgbShow.backgroundColor =  rgbShow.backgroundColor?.withAlphaComponent(CGFloat(sliderGreen.value))
     }
     
     @IBAction func sliderBlueAction() {
         blueColorMeaning.text = String(sliderBlue.value)
         rgbShow.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1)
         
-        rgbShow.backgroundColor =  rgbShow.backgroundColor?.withAlphaComponent(CGFloat(sliderBlue.value))
+//        rgbShow.backgroundColor =  rgbShow.backgroundColor?.withAlphaComponent(CGFloat(sliderBlue.value))
     }
     
     // MARK: - Private Methods
+//    private func sliderActionColor(_: UILabel, _: UISlider) {
+//        UILabel.text = String(UISlider.value)
+//        rgbShow.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1)
+//    }
+//    
+//    private func setupSliderColor() {
+//        sliderRed.value = 0
+//        sliderRed.minimumValue = 0
+//        sliderRed.maximumValue = 1
+//        sliderRed.minimumTrackTintColor = .red
+//        sliderRed.maximumTrackTintColor = .gray
+//        sliderRed.thumbTintColor = .red
+//    }
+    
     private func setupSliderRed() {
         sliderRed.value = 0
         sliderRed.minimumValue = 0
@@ -79,11 +93,6 @@ final class ViewController: UIViewController {
         sliderBlue.thumbTintColor = .blue
     }
     
-//    private func sliderAction(sliderColor.value: Float) {
-//        redColorMeaning.text = String(sliderColor.value)
-//        rgbShow.backgroundColor = UIColor(red: CGFloat(sliderRed.value), green: CGFloat(sliderGreen.value), blue: CGFloat(sliderBlue.value), alpha: 1)
-//    }
-//
-        
+    
 }
 
