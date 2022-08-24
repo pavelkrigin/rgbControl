@@ -7,7 +7,9 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+
+
+final class SettingsViewController: UIViewController {
 
 //MARK: - Outlets
     @IBOutlet var rgbShow: UIView!
@@ -20,9 +22,18 @@ final class ViewController: UIViewController {
     @IBOutlet var sliderGreen: UISlider!
     @IBOutlet var sliderBlue: UISlider!
     
+    @IBOutlet var doneButton: UIButton! 
+    
+    var color: UIColor!
+    
+    var delegate: SettingsVCprotocol!
+    
 //MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rgbShow.backgroundColor = color
+        
         rgbShow.layer.cornerRadius = 10
         
         setupSlider(sliderRed, color: .red)
@@ -30,8 +41,10 @@ final class ViewController: UIViewController {
         setupSlider(sliderBlue, color: .blue)
         
         setupViewColor()
+        
+
     }
-    
+        
 //MARK: - IBA Functions
     @IBAction func sliderRedAction() {
         redColorMeaning.text = String(sliderRed.value)
@@ -47,6 +60,11 @@ final class ViewController: UIViewController {
         blueColorMeaning.text = String(sliderBlue.value)
         setupViewColor()
     }
+    
+    @IBAction func doneButton(_ sender: Any) {
+        delegate.getColor(for: rgbShow.backgroundColor ?? .blue)
+    }
+    
     
     // MARK: - Private Methods
     private func setupViewColor() {
@@ -65,4 +83,5 @@ final class ViewController: UIViewController {
         slider.thumbTintColor = color
     }
 }
+
 
