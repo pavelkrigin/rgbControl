@@ -19,7 +19,7 @@ final class FirstScreenViewController: UIViewController {
 //MARK: Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        view.backgroundColor = .white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
