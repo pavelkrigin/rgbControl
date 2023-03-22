@@ -63,7 +63,7 @@ final class SettingsViewController: UIViewController {
     
     @IBAction func doneButton(_ sender: Any) {
         delegate.getColor(for: rgbShow.backgroundColor ?? .blue)
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     
